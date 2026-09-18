@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: bot4stage
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: DEVELOPER_ID
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: SESSION1
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_DAILY_LIMIT
+        value: 4000
+      - key: MAX_UPLOAD_MB
+        value: 200
+      - key: STORAGE_CHANNEL_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: ENVIRONMENT
+        value: production
+      - key: MINI_APP_URL
+        sync: false
