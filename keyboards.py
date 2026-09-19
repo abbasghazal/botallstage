@@ -28,11 +28,6 @@ class Keyboards:
             buttons.append([Button.inline("🎓 قسم خاص بالرابعة", f'stage_{stage}:research')])
 
         buttons.extend([
-            # A native Web App button opens inside Telegram and supplies
-            # Telegram.WebApp.initData.  A normal URL (or a menu button that a
-            # desktop client sends to the external browser) cannot authenticate
-            # the Mini App.
-            *([[Button.web_app("📱 فتح المنصة التعليمية", MINI_APP_URL)]] if MINI_APP_URL else []),
             [Button.inline("🧪 اختبار سريع", 'learning:quiz'),
              Button.inline("⭐ المفضلة", 'learning:favorites')],
             [Button.inline("📈 تقدمي", 'learning:progress'),
