@@ -1,0 +1,7 @@
+{
+  "name": "bot4stage-client-tests",
+  "private": true,
+  "scripts": { "test:client": "node tests/test_client_runtime.cjs" },
+  "devDependencies": { "jsdom": "26.1.0" },
+  "engines": { "node": ">=18" }
+}
